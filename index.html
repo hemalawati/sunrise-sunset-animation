@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Sunrise Sunset</title>
+	</head>
+	<body>
+		<div class="space">
+			<div class="sun"></div>
+			<img src="images/cityscape.png" alt="cityscape" />
+			<div class="moon"></div>
+			<div class="clouds">
+				<img class="fat-cloud" src="images/fat-cloud.png" alt="fat-cloud" />
+				<img class="thin-cloud" src="images/thin-cloud.png" alt="thin-cloud" />
+				<img
+					class="scatter-cloud"
+					src="images/scatter-cloud.png"
+					alt="scatter-cloud"
+				/>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			function cosmos() {
+				const stars = 500;
+				const space = document.querySelector('.space');
+				const count = 0;
+
+				while (count < stars) {
+					const star = document.createElement('i');
+					const x = Math.floor(Math.random() * window.innerWidth);
+					const y = Math.floor(Math.random() * window.innerHeight);
+					const size = Math.random() * 4;
+
+					star.style.left = x + 'px';
+					star.style.top = y + 'px';
+					star.style.width = 1 + size + 'px';
+					star.style.height = 1 + size + 'px';
+
+					space.append(star);
+					count++;
+				}
+			}
+
+			cosmos();
+		</script>
+	</body>
+</html>
