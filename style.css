@@ -15,7 +15,7 @@ body {
 
 img {
 	position: absolute;
-	bottom: 0;
+	bottom: -1%;
 	height: 400px;
 	width: 100%;
 	z-index: 1000;
@@ -33,6 +33,7 @@ img {
 	top: 0;
 	left: 0;
 	max-width: 600px;
+	max-height: 200px;
 	z-index: 10;
 	animation: animateCloud 50s linear infinite;
 }
@@ -50,10 +51,10 @@ img {
 }
 
 .scatter-cloud {
-	top: 12%;
+	top: 20%;
 	left: 0;
 	z-index: 10;
-	animation: animateCloud 40s linear infinite;
+	animation: animateCloud 100s linear infinite;
 }
 
 .space i {
@@ -79,9 +80,10 @@ img {
 
 .thin-cloud {
 	position: absolute;
-	top: 10%;
+	top: 20%;
 	left: 0;
 	max-width: 500px;
+	max-height: 100px;
 	z-index: 10;
 	animation: animateCloud 35s linear infinite;
 	animation-delay: -10s;
@@ -120,7 +122,7 @@ img {
 
 @keyframes sun {
 	100% {
-		transform: translateY(900px);
+		transform: translateY(1000px);
 	}
 }
 
