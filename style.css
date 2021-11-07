@@ -35,7 +35,7 @@ img {
 	max-width: 600px;
 	max-height: 200px;
 	z-index: 10;
-	animation: animateCloud 50s linear infinite;
+	animation: animateCloud 35s linear infinite;
 }
 
 .moon {
@@ -85,8 +85,7 @@ img {
 	max-width: 500px;
 	max-height: 100px;
 	z-index: 10;
-	animation: animateCloud 35s linear infinite;
-	animation-delay: -10s;
+	animation: animateCloud 50s linear infinite;
 }
 
 @keyframes animateCloud {
