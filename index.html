@@ -9,7 +9,7 @@
 	<body>
 		<div class="space">
 			<div class="sun"></div>
-			<img src="images/cityscape.png" alt="cityscape" />
+			<img src="images/city-skyline.png" alt="city-skyline" />
 			<div class="moon"></div>
 			<div class="clouds">
 				<img class="fat-cloud" src="images/fat-cloud.png" alt="fat-cloud" />
@@ -24,9 +24,9 @@
 
 		<script type="text/javascript">
 			function cosmos() {
-				const stars = 500;
+				const stars = 100;
 				const space = document.querySelector('.space');
-				const count = 0;
+				let count = 0;
 
 				while (count < stars) {
 					const star = document.createElement('i');
@@ -38,6 +38,9 @@
 					star.style.top = y + 'px';
 					star.style.width = 1 + size + 'px';
 					star.style.height = 1 + size + 'px';
+
+					const duration = Math.random() * 2;
+					star.style.animationDuration = 2 + duration + 's';
 
 					space.append(star);
 					count++;

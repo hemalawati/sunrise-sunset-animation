@@ -8,7 +8,7 @@ body {
 	position: relative;
 	width: 100%;
 	height: 100vh;
-	background-color: #ccccff;
+	background-color: #48bcff;
 	overflow-y: hidden;
 	animation: sky 5.5s 2s forwards;
 }
@@ -16,8 +16,9 @@ body {
 img {
 	position: absolute;
 	bottom: 0;
-	height: 340px;
+	height: 400px;
 	width: 100%;
+	z-index: 1000;
 }
 
 .clouds {
@@ -38,15 +39,14 @@ img {
 
 .moon {
 	position: absolute;
-	top: 5%;
-	right: 10%;
+	left: 10%;
 	width: 100px;
 	height: 100px;
 	background-color: transparent;
 	box-shadow: 20px 10px #fff;
 	border-radius: 50%;
 	opacity: 0;
-	animation: moon 0.8s 7s forwards;
+	animation: moon 8s 8s forwards;
 }
 
 .scatter-cloud {
@@ -54,15 +54,15 @@ img {
 	left: 0;
 	z-index: 10;
 	animation: animateCloud 40s linear infinite;
-	animation-delay: -20s;
 }
 
 .space i {
 	position: absolute;
 	background-color: #fff;
 	border-radius: 50%;
+	box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff;
 	opacity: 0;
-	animation: stars 0.8s 7s linear;
+	animation: stars 8s 6s linear infinite;
 }
 
 .sun {
@@ -74,7 +74,7 @@ img {
 	background-color: #fcfc3a;
 	border-radius: 50%;
 	box-shadow: 0 0 30px 10px #fcfc3a;
-	animation: sun 15s forwards;
+	animation: sun 12s forwards;
 }
 
 .thin-cloud {
@@ -99,37 +99,39 @@ img {
 @keyframes moon {
 	100% {
 		opacity: 1;
+		transform: translate(100px, 100px);
 	}
 }
 
 @keyframes stars {
-	from {
-		background-position: 0 0;
+	0% {
+		opacity: 0;
+	}
+	10% {
 		opacity: 1;
 	}
-	to {
-		background-position: -10000px 5000px;
+	90% {
 		opacity: 1;
+	}
+	100% {
+		opacity: 0;
 	}
 }
 
 @keyframes sun {
 	100% {
-		transform: translateY(750px);
+		transform: translateY(900px);
 	}
 }
 
 @keyframes sky {
 	50% {
-		background-color: #ffd700;
-	}
-	65% {
 		background-color: #ffb90f;
 	}
-	85% {
+	80% {
 		background-color: #b39300;
 	}
 	100% {
-		background-color: #68228b;
+		background-color: #0805d3;
 	}
 }
